@@ -8,15 +8,18 @@ namespace EmployeeWageComputation
 {
     public class WageComputation
     {
-        const int IS_PRESENT = 0;
-        public void EmployeeAttendence()
+        const int IS_FullTIME = 1, EmpRatePerHr = 20, IS_FullHr = 8;
+        int empHrs = 0, totalEmpWage;
+        public void CalculateEmpWage()
         {
             Random random = new Random();
-            int check = random.Next(0, 2);
-            if (check == IS_PRESENT)
-                Console.WriteLine("Employee is present");
+            int empCheck = random.Next(0, 2);
+            if (empCheck == IS_FullTIME)
+                empHrs = IS_FullHr;
             else
-                Console.WriteLine("Employee is Absent");
+                empHrs = 0;
+            totalEmpWage = empHrs * EmpRatePerHr;
+            Console.WriteLine("EMP Wage : " + totalEmpWage);
         }
     }
 }
