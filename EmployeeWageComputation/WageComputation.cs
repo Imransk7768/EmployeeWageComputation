@@ -10,12 +10,13 @@ namespace EmployeeWageComputation
     {
 
         const int IS_FullTIME = 1, IS_PARTTIME = 2, EmpRatePerHr = 20,
-        Emp_Full_Time_Hrs = 8, Emp_Part_time_Hrs = 4, Emp_Working_Per_Month = 20;
-        int empHrs = 0, totalEmpSalary = 0;
+        Emp_Full_Time_Hrs = 8, Emp_Part_time_Hrs = 4, Emp_Working_Per_Month = 20,
+        Max_Work_Hr = 100;
+        int empHrs = 0, totalEmpSalary = 0, day = 0;
 
-        public void EmpMonthlyWage()
+        public void MaxEmpMonthlyWage()
         {
-            for (int i = 0; i <= Emp_Working_Per_Month; i++)
+            while (day <= Emp_Working_Per_Month && empHrs <= Max_Work_Hr)
             {
                 Random random = new Random();
                 int empCheck = random.Next(0, 3);
@@ -34,10 +35,14 @@ namespace EmployeeWageComputation
                         empHrs = 0;
                         break;
                 }
+                day++;
 
             }
+
             totalEmpSalary = empHrs * EmpRatePerHr;
-            Console.WriteLine("Monthly Employee salary is :" + totalEmpSalary);
+            Console.WriteLine("month Employee Salary is :" + totalEmpSalary);
         }
+
+
     }
 }
