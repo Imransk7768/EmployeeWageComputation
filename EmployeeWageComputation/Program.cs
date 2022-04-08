@@ -2,4 +2,5 @@
 using EmployeeWageComputation;
 WageComputation com = new WageComputation();
 //com.EmployeeAttendence();
-com.CalculateEmpWage();
+//com.CalculateEmpWage();
+com.CalculateEmpDailyWage();
