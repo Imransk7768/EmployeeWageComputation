@@ -14,6 +14,8 @@ namespace EmployeeWageComputation
         Max_Work_Hr = 100;
         int empHrs = 0, totalEmpSalary = 0, day = 0;
 
+        public int Max_Working_Hr { get; set; }
+
         public void MaxEmpMonthlyWage()
         {
             while (day <= Emp_Working_Per_Month && empHrs <= Max_Work_Hr)
@@ -36,13 +38,9 @@ namespace EmployeeWageComputation
                         break;
                 }
                 day++;
-
             }
-
             totalEmpSalary = empHrs * EmpRatePerHr;
             Console.WriteLine("month Employee Salary is :" + totalEmpSalary);
         }
-
-
     }
 }
