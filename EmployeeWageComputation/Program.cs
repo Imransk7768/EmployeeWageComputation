@@ -5,15 +5,11 @@ namespace EmployeeWageComputation
     {
         public static void Main(string[] args)
         {
-            WageComputation Philips = new WageComputation("Philips", 20, 4, 10);
-            Philips.eachCompanyTotalWage();
-            Console.WriteLine(Philips.ToString());
-            WageComputation Samsung = new WageComputation("Samsung", 23, 8, 10);
-            Samsung.eachCompanyTotalWage();
-            Console.WriteLine(Samsung.ToString());
-            WageComputation Asus = new WageComputation("Asus", 25, 6, 12);
-            Asus.eachCompanyTotalWage();
-            Console.WriteLine(Asus.ToString());
+            WageComputation company = new WageComputation();
+            company.AddCompanyEmpWage("Reliance", 400, 200, 10);
+            company.AddCompanyEmpWage("Microsoft", 500, 150, 30);
+            company.ComputeEmpWage();
+            Console.WriteLine(company.ToString());
         }
     }
 }
