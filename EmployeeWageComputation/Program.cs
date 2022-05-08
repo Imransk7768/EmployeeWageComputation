@@ -1,7 +1,7 @@
 ﻿using System;
 namespace EmployeeWageComputation
 {
-    public interface Program
+    public class Program
     {
         public static void Main(string[] args)
         {
